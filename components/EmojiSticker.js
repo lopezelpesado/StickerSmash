@@ -16,10 +16,19 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
       }
     });
 
+  const withSpringConfig = {
+    mass: 1,
+    damping: 25,
+    stiffness: 350,
+    overshootClamping: false,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: 2,
+  };
+
   const imageStyle = useAnimatedStyle(() => {
     return {
-      width: withSpring(scaleImage.value),
-      height: withSpring(scaleImage.value),
+      width: withSpring(scaleImage.value, withSpringConfig),
+      height: withSpring(scaleImage.value, withSpringConfig),
     };
   });
 
