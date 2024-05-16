@@ -13,6 +13,11 @@ import EmojiPicker from './components/EmojiPicker';
 import EmojiSticker from './components/EmojiSticker';
 import IconButton from './components/IconButton';
 import ImageViewer from './components/ImageViewer';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
+/*global setTimeout*/
+setTimeout(SplashScreen.hideAsync, 500);
 
 const PlaceholderImage = require('./assets/images/background-image.png');
 
@@ -78,7 +83,8 @@ export default function App() {
           height: 440,
         });
 
-        let link = window.document.createElement('a');
+        /*global document*/
+        let link = document.createElement('a');
         link.download = 'sticker-smash.jpeg';
         link.href = dataUrl;
         link.click();
@@ -129,7 +135,7 @@ export default function App() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </GestureHandlerRootView>
   );
 }
