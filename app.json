@@ -22,6 +22,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4141fa77-91d1-4c3b-80de-a146db0b08e0"
+      }
+    },
+    "owner": "lopezelpesado"
   }
 }
