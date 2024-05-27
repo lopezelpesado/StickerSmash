@@ -12,7 +12,8 @@
       "backgroundColor": "#25292e"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lopezelpesado.StickerSmash"
     },
     "android": {
       "adaptiveIcon": {
